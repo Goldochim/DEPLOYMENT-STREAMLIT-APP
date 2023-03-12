@@ -1,6 +1,6 @@
 """
-Created on Mon Mar 15 21:23:47 2021
-@author: DELL
+Created on Sun Mar 12 20:37:47 2023
+@author: Gold Ochim
 """
 import streamlit as st
 
@@ -81,15 +81,7 @@ def main():
 
     html_temp = """
     <div style="background-color:tomato;padding:8px">
-    <h1 style="color:white;text-align:center;"> Heart Failure Predictor </h1>
-    
-          
-            
-    
-          
-    
-    
-  
+    <h1 style="color:white;text-align:center;"> Heart Failure Predictor-AdaBoost J48 </h1>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)

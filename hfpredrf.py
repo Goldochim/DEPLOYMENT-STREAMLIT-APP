@@ -3,7 +3,15 @@ import numpy as np
 import pickle
 import streamlit as st
 from PIL import Image
-  
+
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.datasets import make_classification
+from sklearn.ensemble import RandomForestClassifier
+
+
 # loading in the model to predict on the data
 pickle_in = open('rfmodel.pkl', 'rb')
 classifier = pickle.load(pickle_in)

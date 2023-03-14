@@ -7,7 +7,7 @@ from PIL import Image
 
 # loading in the model to predict on the data
 pickle_in = open('rfmodel.pkl', 'rb')
-classifier = pickle.load(pickle_in)
+rfmodel = pickle.load(pickle_in)
 
 
 def welcome():

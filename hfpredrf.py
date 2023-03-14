@@ -4,11 +4,6 @@ import pickle
 import streamlit as st
 from PIL import Image
 
-import scikit-learn
-from scikit-learn.tree import DecisionTreeClassifier
-from scikit-learn.metrics import accuracy_score, confusion_matrix
-from scikit-learn.ensemble import RandomForestClassifier
-
 
 # loading in the model to predict on the data
 pickle_in = open('rfmodel.pkl', 'rb')

@@ -1,6 +1,6 @@
 import pickle
 import streamlit as st
-import sklearn
+import scikit-learn
 
 # loading in the model to predict on the data
 classifier = pickle.load(open('rfmodel.pkl', 'rb'))
@@ -14,8 +14,7 @@ def welcome():
 
 def prediction(Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr):
 
-    prediction = classifier.predict(
-        [[Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr]])
+    prediction = classifier.predict([[Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr]])
     print(prediction)
     return prediction
 

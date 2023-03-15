@@ -1,13 +1,8 @@
-import pandas as pd
-import numpy as np
 import pickle
 import streamlit as st
-from PIL import Image
-
 
 # loading in the model to predict on the data
 classifier = pickle.load(open('rfmodel.pkl', 'rb'))
-
 
 def welcome():
     return 'welcome all'

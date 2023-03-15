@@ -1,9 +1,0 @@
-numpy
-pandas
-pipreqs
-scikit-image
-scikit-learn
-scipy
-sklearn
-streamlit
-pickle

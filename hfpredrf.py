@@ -21,35 +21,33 @@ def prediction(sepal_length, sepal_width, petal_length, petal_width):
 
 # this is the main function in which we define our webpage
 def main():
-    # giving the webpage a title
-    st.title("Iris Flower Prediction")
-
-    # here we define some of the front end elements of the web page like
-    # the font and background color, the padding and the text to be displayed
-    html_temp = """
-    <div style ="background-color:yellow;padding:13px">
-    <h1 style ="color:black;text-align:center;">Streamlit Iris Flower Classifier ML App </h1>
+   html_temp = """
+    <div style="background-color:tomato;padding:8px">
+    <h1 style="color:white;text-align:center;"> Heart Failure Predictor-AdaBoost J48 </h1>
     </div>
     """
-
-    # this line allows us to display the front end aspects we have
-    # defined in the above code
     st.markdown(html_temp, unsafe_allow_html=True)
 
-    # the following lines create text boxes in which the user can enter
-    # the data required to make the prediction
-    sepal_length = st.text_input("Sepal Length", "Type Here")
-    sepal_width = st.text_input("Sepal Width", "Type Here")
-    petal_length = st.text_input("Petal Length", "Type Here")
-    petal_width = st.text_input("Petal Width", "Type Here")
+    Age = st.number_input("Age: ", 0.0, 120.0, step=1.0)
+    sex = st.selectbox("Sex: ", ('1-male', '0-female'))
+    cp = st.selectbox("cp: ", ('1-Typical Angina',
+                      '2-Atypical Angina', '3-Non Angina', '4-Asymptomatic'))
+    sc = st.number_input("sc: ", 0.0, 500.0, step=1.0)
+    tstr = st.selectbox(
+        "tstr: ", ('3-Normal', '6-Fixed Defect', '7-Reversible Defect'))
+    rer = st.selectbox("rer: ", ('0-Normal', '1-Having ST Wave Abnormality',
+                       '2-Showing Probable or Definite Left Ventricular hypertrophy by Estes Criteria'))
+    nmv = st.number_input("nmv: ", 0.0, 3.0, step=1.0)
+    rbp = st.number_input("rbp: ", 0.0, 200.0, step=1.0)
+    spe = st.selectbox("spe: ", ('1-Upsloping', '2-Flat', '3-Downsloping'))
+    sdierr = st.number_input("sdierr: ", 0.0, 6.2, step=0.1)
     result = ""
 
     # the below line ensures that when the button called 'Predict' is clicked,
     # the prediction function defined above is called to make the prediction
     # and store it in the variable result
     if st.button("Predict"):
-        result = prediction(sepal_length, sepal_width,
-                            petal_length, petal_width)
+        result = prediction(Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr)
     st.success('The output is {}'.format(result))
 
 

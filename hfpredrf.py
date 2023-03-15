@@ -1,6 +1,6 @@
 import pickle
 import streamlit as st
-import scikit-learn
+import sklearn
 
 # loading in the model to predict on the data
 classifier = pickle.load(open('rfmodel.pkl', 'rb'))

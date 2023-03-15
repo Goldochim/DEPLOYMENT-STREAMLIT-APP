@@ -22,11 +22,12 @@ def prediction(Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr):
 
 # this is the main function in which we define our webpage
 def main():
-   html_temp = """
+    html_temp = """
     <div style="background-color:tomato;padding:8px">
     <h1 style="color:white;text-align:center;"> Heart Failure Predictor-AdaBoost J48 </h1>
     </div>
     """
+    
     st.markdown(html_temp, unsafe_allow_html=True)
 
     Age = st.number_input("Age: ", 0.0, 120.0, step=1.0)

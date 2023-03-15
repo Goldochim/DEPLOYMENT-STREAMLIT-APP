@@ -1,6 +1,6 @@
 import pickle
 import streamlit as st
-import scikit-learn
+import scikitlearn
 
 
 # loading in the model to predict on the data

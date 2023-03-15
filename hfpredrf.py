@@ -11,10 +11,10 @@ def welcome():
 # the data which the user inputs
 
 
-def prediction(sepal_length, sepal_width, petal_length, petal_width):
+def prediction(Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr):
 
     prediction = classifier.predict(
-        [[sepal_length, sepal_width, petal_length, petal_width]])
+        [[Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr]])
     print(prediction)
     return prediction
 

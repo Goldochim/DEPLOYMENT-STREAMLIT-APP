@@ -7,7 +7,7 @@ Created on Wed Mar 22 12:34:49 2023
 
 import pickle
 import streamlit as st
-import scikit-learn
+
 
 
 # loading in the model to predict on the data

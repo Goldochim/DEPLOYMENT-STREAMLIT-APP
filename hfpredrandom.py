@@ -21,7 +21,7 @@ def welcome():
 # the data which the user inputs
 
 
-def prediction(Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr):
+def predictionfnc(Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr):
 
     prediction = classifier.predict([[Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr]])
     print(prediction)
@@ -57,7 +57,7 @@ def main():
     # the prediction function defined above is called to make the prediction
     # and store it in the variable result
     if st.button("Predict"):
-        result = prediction(Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr)
+        result = predictionfnc(Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr)
     st.success('The output is {}'.format(result))
 
 

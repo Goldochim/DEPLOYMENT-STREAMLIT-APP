@@ -11,7 +11,8 @@ import streamlit as st
 
 
 # loading in the model to predict on the data
-classifier = pickle.load(open('rfmodel.pkl', 'rb'))
+pickle_in= open("rfmodel.pkl", "rb")
+classifier = pickle.load(pickle_in)
 
 def welcome():
     return 'welcome all'

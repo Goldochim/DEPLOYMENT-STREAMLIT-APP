@@ -21,9 +21,9 @@ def welcome():
 # the data which the user inputs
 
 
-def predictionfnc(Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr):
+def predictionfnc(age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr):
 
-    prediction = classifier.predict([[Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr]])
+    prediction = classifier.predict([[age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr]])
     print(prediction)
     if (prediction[0] == 0):
         return 'NO HEART FAILURE'
@@ -42,7 +42,7 @@ def main():
     
     st.markdown(html_temp, unsafe_allow_html=True)
 
-    Age = st.number_input("Age: ", 0.0, 120.0, step=1.0)
+    age = st.number_input("Age: ", 0.0, 120.0, step=1.0)
     sex = st.selectbox("Sex: ", ('1-male', '0-female'))
     cp = st.selectbox("cp: ", ('1-Typical Angina',
                       '2-Atypical Angina', '3-Non Angina', '4-Asymptomatic'))
@@ -61,7 +61,7 @@ def main():
     # the prediction function defined above is called to make the prediction
     # and store it in the variable result.
     if st.button("Predict"):
-        result = predictionfnc(Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr)
+        result = predictionfnc(age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr)
     st.success(result)
 
 

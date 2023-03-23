@@ -62,7 +62,7 @@ def main():
     # and store it in the variable result.
     if st.button("Predict"):
         result = predictionfnc(Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr)
-    st.success('The output is {}'.format(result))
+    st.success(result)
 
 
 if __name__ == '__main__':

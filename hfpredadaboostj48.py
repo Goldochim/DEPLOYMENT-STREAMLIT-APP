@@ -43,6 +43,7 @@ def main():
     st.markdown(html_temp, unsafe_allow_html=True)
 
     age = st.number_input("Age: ", 0.0, 120.0, step=1.0)
+    
     sex = st.selectbox("Sex: ", ('1-male', '0-female'))
     if sex=='1-male':
         sex=1
@@ -50,14 +51,48 @@ def main():
         sex=0
     cp = st.selectbox("cp: ", ('1-Typical Angina',
                       '2-Atypical Angina', '3-Non Angina', '4-Asymptomatic'))
+    if cp=='1-Typical Angina':
+        cp=1
+    elif cp=='2-Atypical Angina':
+        cp=2  
+    elif cp=='3-Non Angina':
+        cp=3
+    else cp=='4-Asymptomatic':
+        cp==4
+        
+ 
     sc = st.number_input("sc: ", 0.0, 500.0, step=1.0)
     tstr = st.selectbox(
         "tstr: ", ('3-Normal', '6-Fixed Defect', '7-Reversible Defect'))
+    if tstr=='3-Normal':
+        tstr=3
+    elif tstr== '6-Fixed Defect':
+        tstr=6
+    else:
+        tstr=7
+        
+        
     rer = st.selectbox("rer: ", ('0-Normal', '1-Having ST Wave Abnormality',
                        '2-Showing Probable or Definite Left Ventricular hypertrophy by Estes Criteria'))
+    if rer=='0-Normal':
+        rer=0
+    elif rer== '1-Having ST Wave Abnormality':
+        rer=1
+    else:
+        rer=2
+    
+    
     nmv = st.number_input("nmv: ", 0.0, 3.0, step=1.0)
     rbp = st.number_input("rbp: ", 0.0, 200.0, step=1.0)
+    
     spe = st.selectbox("spe: ", ('1-Upsloping', '2-Flat', '3-Downsloping'))
+    if spe=='1-Upsloping':
+        spe=1
+    elif spe== '2-Flat':
+        spe=2
+    else:
+        spe=3
+    
     sdierr = st.number_input("sdierr: ", 0.0, 6.2, step=0.1)
     result = ""
 

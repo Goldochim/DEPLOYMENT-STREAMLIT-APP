@@ -58,7 +58,7 @@ def main():
     elif cp=='3-Non Angina':
         cp=3
     else cp=='4-Asymptomatic':
-        cp==4
+        cp=4
         
  
     sc = st.number_input("sc: ", 0.0, 500.0, step=1.0)

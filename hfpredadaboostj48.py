@@ -57,7 +57,7 @@ def main():
         cp=2  
     elif cp=='3-Non Angina':
         cp=3
-    else cp=='4-Asymptomatic':
+    else:
         cp=4
         
  

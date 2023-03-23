@@ -44,6 +44,10 @@ def main():
 
     age = st.number_input("Age: ", 0.0, 120.0, step=1.0)
     sex = st.selectbox("Sex: ", ('1-male', '0-female'))
+    if sex=='1-male':
+        sex=1
+    else:
+        sex=0
     cp = st.selectbox("cp: ", ('1-Typical Angina',
                       '2-Atypical Angina', '3-Non Angina', '4-Asymptomatic'))
     sc = st.number_input("sc: ", 0.0, 500.0, step=1.0)

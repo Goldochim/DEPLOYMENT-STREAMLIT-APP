@@ -59,7 +59,7 @@ def main():
 
     # the below line ensures that when the button called 'Predict' is clicked,
     # the prediction function defined above is called to make the prediction
-    # and store it in the variable result
+    # and store it in the variable result.
     if st.button("Predict"):
         result = predictionfnc(Age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr)
     st.success('The output is {}'.format(result))

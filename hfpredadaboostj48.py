@@ -28,7 +28,7 @@ def predictionfnc(age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr):
     if (prediction[0] == 0):
         return 'NO HEART FAILURE'
     else:
-        return 'WARNING!!!, HEART FAILURE PREDICTED'
+        return 'WARNING!!! HEART FAILURE PREDICTED'
 
 
 

@@ -25,11 +25,8 @@ def predictionfnc(age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr):
 
     prediction = classifier.predict([[age, sex, cp, sc, tstr, rer, nmv, rbp, spe, sdierr]])
     print(prediction)
-    if (prediction[0] == 0):
-        return 'NO HEART FAILURE'
-    else:
-        return 'WARNING!!! HEART FAILURE PREDICTED'
-
+    return prediction
+   
 
 
 # this is the main function in which we define our webpage
